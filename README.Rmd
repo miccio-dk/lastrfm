@@ -18,7 +18,8 @@ knitr::opts_chunk$set(
 [![Travis-CI Build Status](https://travis-ci.org/miccio-dk/lastrfm.svg?branch=master)](https://travis-ci.org/miccio-dk/lastrfm)
 
 
-Read data from the [last.fm](www.last.fm) [APIs](http://www.last.fm/api).
+Wrapper around the [last.fm](www.last.fm) [APIs](http://www.last.fm/api).
+Read data about artists, albums, tracks, users, etc.
 The following methods are available:
 
  - **Artist**: info, correction, similar, tags, albums, tracks

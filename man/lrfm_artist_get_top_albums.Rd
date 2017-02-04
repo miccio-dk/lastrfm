@@ -12,4 +12,3 @@ lrfm_artist_get_top_albums(artist, autocorrect = TRUE, n = NULL)
 \description{
 Title
 }
-

@@ -16,6 +16,8 @@
 
 
 ## Other features
+  - [ ] documentation
+  - [ ] tests
   - [ ] filter fake/incorrect tags
   - [ ] authentication
   - [ ] mbid data
