@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+
+# lastrfm
+
+Read data from the [last.fm](www.last.fm) [APIs](http://www.last.fm/api).
+The following methods are available:
+
+ - **Artist**: info, correction, similar, tags, albums, tracks
+ - **Album**: info, tags
+ - **Track**: info, correction, similar, tags
+
+
+### Installation
+
+```{r installation, eval = FALSE}
+devtools::install_github("miccio-dk/lastrfm")
+```
+  
+### Quick demo
+
+Gets top 5 Radiohead albums:
+
+```{r}
+library(lastrfm)
+albums <- lrfm_artist_get_top_albums("Radiohead", n = 5)
+albums$name
+```

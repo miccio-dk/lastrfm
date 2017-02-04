@@ -12,7 +12,7 @@ tags_ignore <- c("albums I own", "singles i own", "favorite albums",
 tags_per_artist <- 5
 albums_per_artist <- 7
 artist <- "Mogwai"
-albums <- lrfm_artist_get_top_albums(artist, n=50) %>%
+albums <- lrfm_artist_get_top_albums(artist, n = 20) %>%
   na.omit() %>%
   head(albums_per_artist)
 
@@ -20,7 +20,7 @@ tags <- apply(albums, 1, function(album) {
   album_name <- as.character(album["name"])
   album_name %>% paste("\t") %>% cat()
 
-  album_tags <- lrfm_album_get_top_tags(artist, album_name, n=15)
+  album_tags <- lrfm_album_get_top_tags(artist, album_name, n = 15)
   if(is.data.frame(album_tags)) {
     album_year <- album_tags$name %>%
       str_subset("^\\d{4}$") %>%

@@ -1,3 +1,13 @@
+#' Title
+#'
+#' @param artist
+#' @param autocorrect
+#' @param n
+#'
+#' @return
+#' @export
+#'
+#' @examples
 lrfm_artist_get_top_tracks <- function(artist, autocorrect = TRUE, n = lrfm_page_limit) {
   # create params object
   api_params <- data.frame(

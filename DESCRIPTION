@@ -1,13 +1,21 @@
 Package: lastrfm
 Type: Package
-Title: Read data from last.fm API
+Title: Read data from the last.fm APIs
 Version: 0.0.1
 Authors@R: as.person(c("Riccardo Miccini <riccardo.miccini@gmail.com> [aut, cre]"))
-Description: Read data from last.fm API
+Description: Read data from the last.fm APIs
 License: MIT + file LICENSE
 LazyData: TRUE
 Depends:
     dplyr,
     readr,
-	jsonlite,
+    jsonlite,
     httr
+URL: https://github.com/miccio-dk/lastrfm
+BugReports: https://github.com/miccio-dk/lastrfm/issues
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
