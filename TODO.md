@@ -3,6 +3,8 @@
 ## Useful links
   - https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html
   - https://cran.r-project.org/doc/manuals/R-exts.pdf
+  - http://stat545.com/packages05_foofactors-package-02.html
+  - http://r-pkgs.had.co.nz/release.html
 
 
 ## Data acquisition workflow
