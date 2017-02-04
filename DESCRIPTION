@@ -1,0 +1,13 @@
+Package: lastrfm
+Type: Package
+Title: Read data from last.fm API
+Version: 0.0.1
+Authors@R: as.person(c("Riccardo Miccini <riccardo.miccini@gmail.com> [aut, cre]"))
+Description: Read data from last.fm API
+License: MIT + file LICENSE
+LazyData: TRUE
+Depends:
+    dplyr,
+    readr,
+	jsonlite,
+    httr
