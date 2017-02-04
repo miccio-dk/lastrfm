@@ -3,36 +3,30 @@
 lastrfm
 =======
 
+[![Travis-CI Build Status](https://travis-ci.org/miccio-dk/lastrfm.svg?branch=master)](https://travis-ci.org/miccio-dk/lastrfm)
+
 Read data from the [last.fm](www.last.fm) [APIs](http://www.last.fm/api). The following methods are available:
 
 -   **Artist**: info, correction, similar, tags, albums, tracks
 -   **Album**: info, tags
 -   **Track**: info, correction, similar, tags
 
-### Installation
+Installation
+------------
+
+Install the latest development version from GitHub:
 
 ``` r
 devtools::install_github("miccio-dk/lastrfm")
 ```
 
-### Quick demo
+Quick demo
+----------
 
 Gets top 5 Radiohead albums:
 
 ``` r
 library(lastrfm)
-#> Loading required package: dplyr
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-#> Loading required package: readr
-#> Loading required package: jsonlite
-#> Loading required package: httr
 albums <- lrfm_artist_get_top_albums("Radiohead", n = 5)
 albums$name
 #> [1] "OK Computer" "In Rainbows" "The Bends"   "Kid A"       "Pablo Honey"
