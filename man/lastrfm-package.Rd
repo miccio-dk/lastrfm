@@ -8,6 +8,8 @@
 \description{
 Wrapper around the last.fm APIs.
 Read data about artists, albums, tracks, users, etc.
+The supported methods are documented at http://www.last.fm/api/show/.
+Check the index for information about specific functions.
 }
 \seealso{
 Useful links:

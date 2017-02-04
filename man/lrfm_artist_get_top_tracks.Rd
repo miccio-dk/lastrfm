@@ -2,13 +2,25 @@
 % Please edit documentation in R/lrfm_artist_get_top_tracks.R
 \name{lrfm_artist_get_top_tracks}
 \alias{lrfm_artist_get_top_tracks}
-\title{Title}
+\title{Get artist top tracks}
 \usage{
 lrfm_artist_get_top_tracks(artist, autocorrect = TRUE, n = lrfm_page_limit)
 }
 \arguments{
-\item{n}{}
+\item{artist}{The artist name (required)}
+
+\item{autocorrect}{Transform misspelled artist names into correct artist names,
+returning the correct version instead (optional)}
+
+\item{n}{Number of tracks to return (optional, default is \code{lrfm_page_limit})}
+}
+\value{
+Data.frame of top \code{n} tags with name, play count, number of listeners, mbid ID, and url; ordered by popularity.
 }
 \description{
-Title
+Get the top tracks by an artist on Last.fm, ordered by popularity
+This service does not require authentication.
+}
+\examples{
+lrfm_artist_get_top_tracks("Radiohead", n = 5)
 }

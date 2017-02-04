@@ -2,13 +2,25 @@
 % Please edit documentation in R/lrfm_artist_get_top_albums.R
 \name{lrfm_artist_get_top_albums}
 \alias{lrfm_artist_get_top_albums}
-\title{Title}
+\title{Get artist top albums}
 \usage{
 lrfm_artist_get_top_albums(artist, autocorrect = TRUE, n = NULL)
 }
 \arguments{
-\item{n}{}
+\item{artist}{The artist name (required)}
+
+\item{autocorrect}{Transform misspelled artist names into correct artist names,
+returning the correct version instead (optional)}
+
+\item{n}{Number of albums to return (optional, default is all)}
+}
+\value{
+Data.frame of top \code{n} tags with name, mbid ID, and url; ordered by popularity.
 }
 \description{
-Title
+Get the top albums for an artist on Last.fm, ordered by popularity.
+This service does not require authentication.
+}
+\examples{
+lrfm_artist_get_top_albums("Radiohead", n = 5)
 }

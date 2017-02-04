@@ -3,8 +3,10 @@ Version: 0.0.1
 Title: Read data from the last.fm APIs
 Description: Wrapper around the last.fm APIs.
   Read data about artists, albums, tracks, users, etc.
+  The supported methods are documented at http://www.last.fm/api/show/.
+  Check the index for information about specific functions.
 Authors@R: c(
-  as.person("Riccardo Miccini <riccardo.miccini@gmail.com> [aut, cre]")
+  as.person(c("Riccardo Miccini <riccardo.miccini@gmail.com> [aut, cre]"))
   )
 License: MIT + file LICENSE
 LazyData: TRUE

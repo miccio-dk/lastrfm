@@ -1,5 +1,3 @@
-
-
 lrfm_handle_errors <- function(api_req) {
   json <- httr::content(api_req, as = "text", encoding = "UTF-8") %>%
     fromJSON(simplifyDataFrame = TRUE)
