@@ -1,6 +1,7 @@
-lrfm_page_limit <- 50
+page_limit <- 50
 
-lrfm_send_request_pages <- function(api_method,
+#' @keywords internal
+send_request_pages <- function(api_method,
                                     api_params = data.frame(
                                       param_name = character(),
                                       param_val = character(),
@@ -9,10 +10,10 @@ lrfm_send_request_pages <- function(api_method,
   # add pages params and read first one
   api_params_all <- data.frame(
     param_name = c("page", "limit"),
-    param_val = c("1", as.character(lrfm_page_limit)),
+    param_val = c("1", as.character(page_limit)),
     stringsAsFactors = FALSE) %>%
     bind_rows(api_params)
-  page <- lrfm_send_request(api_method, api_params_all) %>%
+  page <- send_request(api_method, api_params_all) %>%
     unlist(recursive = FALSE)
 
   elems_per_page <- as.numeric(page[[2]]$perPage)
@@ -34,7 +35,7 @@ lrfm_send_request_pages <- function(api_method,
       param_val = c(as.character(page), as.character(elems_per_page)),
       stringsAsFactors = FALSE) %>%
       bind_rows(api_params)
-    page <- lrfm_send_request(api_method, api_params_all) %>%
+    page <- send_request(api_method, api_params_all) %>%
       unlist(recursive = FALSE)
     elems <- bind_rows(elems, select_if(page[[1]], is.character))
   }

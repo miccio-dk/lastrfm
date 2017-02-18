@@ -1,5 +1,6 @@
-lrfm_handle_errors <- function(api_req) {
-  json <- httr::content(api_req, as = "text", encoding = "UTF-8") %>%
+#' @keywords internal
+handle_errors <- function(api_req) {
+  json <- content(api_req, as = "text", encoding = "UTF-8") %>%
     fromJSON(simplifyDataFrame = TRUE)
 
   if(api_req$status_code != 200) {

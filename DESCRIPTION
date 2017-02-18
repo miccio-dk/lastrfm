@@ -10,11 +10,12 @@ Authors@R: c(
   )
 License: MIT + file LICENSE
 LazyData: TRUE
-Depends:
+Imports:
+    utils,
     dplyr,
     readr,
-    jsonlite,
-    httr
+    httr,
+    jsonlite
 URL: https://github.com/miccio-dk/lastrfm
 BugReports: https://github.com/miccio-dk/lastrfm/issues
 Suggests:
@@ -22,4 +23,4 @@ Suggests:
     rmarkdown,
     testthat
 VignetteBuilder: knitr
-RoxygenNote: 6.0.0
+RoxygenNote: 6.0.1

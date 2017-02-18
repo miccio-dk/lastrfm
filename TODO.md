@@ -2,10 +2,12 @@
 
 ## Useful links
   - https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html
-  - https://cran.r-project.org/doc/manuals/R-exts.pdf
+  - https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html
   - http://stat545.com/packages05_foofactors-package-02.html
   - http://r-pkgs.had.co.nz/release.html
-  - https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html
+  - http://www.jayblanco.com/blog/2016/7/9/using-lastfm-and-r-to-understand-my-music-listening-habits
+  - https://cran.r-project.org/doc/manuals/r-release/R-exts.html
+  - https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 
 
 ## Data acquisition workflow

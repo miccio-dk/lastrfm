@@ -10,8 +10,8 @@ tags_ignore <- c("albums I own", "singles i own", "favorite albums",
 
 
 tags_per_artist <- 5
-albums_per_artist <- 7
-artist <- "Mogwai"
+albums_per_artist <- 9
+artist <- "Radiohead"
 albums <- lrfm_artist_get_top_albums(artist, n = 20) %>%
   na.omit() %>%
   head(albums_per_artist)

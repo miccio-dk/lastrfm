@@ -1,15 +1,5 @@
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
-
-
-lrfm_build_url <- function(api_params) {
+#' @keywords internal
+build_url <- function(api_params) {
   # generate string with params
   api_url_params <- api_params %>%
     apply(1, function(param) {
