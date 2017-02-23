@@ -15,7 +15,7 @@
 #' @details If \code{n} is omitted, the functions return:
 #' \itemize{
 #'  \item{All entries for \code{album_get_top_tags}}
-#'  \item{A number of entries up to \code{page_limit} for }
+#'  \item{A number of entries up to \code{page_limit} for TODO}
 #' }
 #'
 NULL
