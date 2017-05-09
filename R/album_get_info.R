@@ -5,20 +5,21 @@
 #'
 #' @examples
 #' album_get_info("Radiohead", "OK Computer", n = 5)
-album_get_info <- function(artist, album, autocorrect = TRUE, n = NULL) {
+album_get_info <- function(artist, album, autocorrect = TRUE, user = NA, lang = NA) {
   # create params object
   api_params <- data.frame(
-    param_name = c("artist", "album", "autocorrect"),
-    param_val = c(URLencode(artist), URLencode(album), as.numeric(autocorrect)),
+    param_name = c("artist", "album", "autocorrect", "username", "lang"),
+    param_val = c(
+      URLencode(artist),
+      URLencode(album),
+      as.numeric(autocorrect),
+      URLencode(user),
+      URLencode(lang)),
     stringsAsFactors = FALSE)
 
   # request data
   res <- send_request("album.getinfo", api_params)
 
-  # return tags
-  if(is.null(n)) {
-    return(res$toptags$tag)
-  } else {
-    return(head(res$toptags$tag, n = n))
-  }
+  # return info
+  return(res)
 }

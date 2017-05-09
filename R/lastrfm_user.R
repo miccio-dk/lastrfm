@@ -8,9 +8,9 @@
 #' @param user The user name to fetch data for (required)
 #' @param period The time period over which to retrieve data for (optional,
 #'        default is \code{overall})
-#' @paran time_range Timestamps of a range - only display scrobbles whiwin these
-#'        times, in UNIX timestamp format. This must be in the UTC time zone.
-#'        (optional, default and \code{NA} are whole range)
+#' @param time_range Date range - only display scrobbles within these times.
+#'        This must be in the UTC time zone. (optional, default and \code{NA}
+#'        are whole range)
 #' @param artist The artist name (TODO)
 #' @param album The album name (TODO)
 #' @param n Number of entries to return (optional)
